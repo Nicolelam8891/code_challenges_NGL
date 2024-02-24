@@ -51,7 +51,7 @@ var findDifference = function(nums1, nums2) {
           secondAnswer.push(num)
       }
   }
-  
+
   totalAnswer.push([...new Set(firstAnswer)])
   totalAnswer.push([...new Set(secondAnswer)])
   return totalAnswer

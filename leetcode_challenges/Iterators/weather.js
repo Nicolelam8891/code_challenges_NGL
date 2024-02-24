@@ -103,3 +103,36 @@ const getAverageTemps = () => {
 
 }
 console.log(getAverageTemps())
+
+/* EXAMPLE 2 */
+/* Return an array of sentences of the locations that are sunny
+and mostly sunny. Include the location and weather type. 
+Eg: 
+[ 'Atlanta, Georgia is sunny.',
+'New Orleans, Louisiana is sunny.',
+'Raleigh, North Carolina is mostly sunny.' ] 
+/*
+
+/*Pseudocode
+Goal: return ARRAY of sentences of LOCATIONS that are: 
+  1. sunny
+  2. mostly sunny
+  3. have location, weather type 
+Input: array of objects
+Output: array of a string
+1. map through location and type with string interpolation
+  a. ${weather.location} is ${type.location}
+2. condition
+  a. if type contains "sunny" & "mostly sunny" -> return into array
+3. return function
+*/
+
+const getSunnyLocations = (weatherArray) => {
+  const sunnyLocations = weatherArray.filter(weather => weather.type === 'sunny' || weather.type === 'mostly sunny') 
+  const weatherSentence = sunnyLocations.map((weather) => {
+    return `${weather.location} is ${weather.type}`
+  })
+    return weatherSentence
+}
+
+console.log(getSunnyLocations(weather))

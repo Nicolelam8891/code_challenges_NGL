@@ -168,3 +168,12 @@ const getHighestHumidity = (weatherArray) => {
   return highestHumidity
 }
 console.log(getHighestHumidity(weather))
+
+//same problem, with sort method
+const getHighestHumidity = (weatherArray) => {
+  const sortHighestHumidity = weatherArray.sort((a, b) => {
+    return b.humidity - a.humidity
+  })
+  return sortHighestHumidity[0]
+}
+console.log(getHighestHumidity(weather))

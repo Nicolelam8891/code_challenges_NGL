@@ -104,8 +104,8 @@ const getAverageTemps = () => {
 }
 console.log(getAverageTemps())
 
-/* EXAMPLE 2 */
-/* Return an array of sentences of the locations that are sunny
+/* EXAMPLE 2 
+Return an array of sentences of the locations that are sunny
 and mostly sunny. Include the location and weather type. 
 Eg: 
 [ 'Atlanta, Georgia is sunny.',
@@ -136,3 +136,35 @@ const getSunnyLocations = (weatherArray) => {
 }
 
 console.log(getSunnyLocations(weather))
+
+/* 
+EXAMPLE 3
+Return the location with the highest humidity. 
+Eg:
+  {
+    location: 'Portland, Oregon',
+    type: 'cloudy',
+    humidity: 84,
+    temperature: { high: 49, low: 38 }
+  } */
+
+/*
+Goal: Return entire element with the highest humidity
+1. iterate through each element and target humidity 
+2. reduce method, acc will hold the highest humidity
+3. return function 
+Input: array of objects
+Output: object (element) of the one that has the highest humidity
+*/
+
+const getHighestHumidity = (weatherArray) => {
+  const highestHumidity = weatherArray.reduce((acc, weatherObject) => {
+  if (weatherObject.humidity > acc.humidity) {
+    return weatherObject
+  } else {
+    return acc
+  }
+}) 
+  return highestHumidity
+}
+console.log(getHighestHumidity(weather))

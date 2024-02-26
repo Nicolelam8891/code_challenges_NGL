@@ -51,6 +51,17 @@ much of that cake is in stock e.g.
         ..etc
      ] */
 
+const getCakeAndStock = (cakeArray) => {
+  const cakeAndStock = cakeArray.map((cake) => {
+    return cakeObject = {
+      flavor: cake.cakeFlavor, 
+      inStock: cake.inStock,
+    }
+      })
+      return cakeAndStock
+    }
+    console.log(getCakeAndStock(cakes))
+
 /* Example 2: Return an array of only the cakes that are in stock
      e.g.
      [

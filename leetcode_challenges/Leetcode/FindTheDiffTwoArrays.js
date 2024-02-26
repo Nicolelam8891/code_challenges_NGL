@@ -10,30 +10,7 @@ Input: nums1 = [1,2,3], nums2 = [2,4,6]
 Output: [[1,3],[4,6]]
 Example 2: 
 Input: nums1 = [1,2,3,3], nums2 = [1,1,2,2]
-Output: [[3],[]]
-/* 
-
-/* 
-PSEUDOCODE
-//Goal: return an array of the nums1 and nums2 array
-//1. Iterate through both arrays
-  a. use a for of loop?
-//2. conditional
-    //a. if nums1 value is also found in nums2 value, we don't want it in the new array
-        //will need to remove the value? slice method?
-        //push into a new array? 
-        //then push that array into another array
-    //b. if nums1 value is not found in nums2 arry, keep the values in the array
-//3. will need to push the array into an empty array
-  //will need to push that into the empty array
-  //empty array will have both arrays in it
-//4. return the empty array 
-
-//nums1.length => 1, which means that there will always be something in it
-//nums2.length <= 1000, will never be larger than 1000 elements
-//nums1[i] => -1000
-//nums2[i] <= 1000
-*/
+Output: [[3],[]] */ 
 
 var findDifference = function(nums1, nums2) {
   const firstAnswer = [];

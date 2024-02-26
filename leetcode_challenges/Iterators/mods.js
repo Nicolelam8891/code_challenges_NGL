@@ -14,7 +14,6 @@ const mods = [
      ]
      */
 
-
 const getStudentsPerInstructor = (modsArray) => {
   const studentsPerInstructor = modsArray.map((mod) => {
     const avgStudPerInstructor = (mod.students / mod.instructors)

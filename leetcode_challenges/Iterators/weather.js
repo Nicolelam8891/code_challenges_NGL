@@ -110,22 +110,8 @@ and mostly sunny. Include the location and weather type.
 Eg: 
 [ 'Atlanta, Georgia is sunny.',
 'New Orleans, Louisiana is sunny.',
-'Raleigh, North Carolina is mostly sunny.' ] 
-/*
+'Raleigh, North Carolina is mostly sunny.' ] */
 
-/*Pseudocode
-Goal: return ARRAY of sentences of LOCATIONS that are: 
-  1. sunny
-  2. mostly sunny
-  3. have location, weather type 
-Input: array of objects
-Output: array of a string
-1. map through location and type with string interpolation
-  a. ${weather.location} is ${type.location}
-2. condition
-  a. if type contains "sunny" & "mostly sunny" -> return into array
-3. return function
-*/
 
 const getSunnyLocations = (weatherArray) => {
   const sunnyLocations = weatherArray.filter(weather => weather.type === 'sunny' || weather.type === 'mostly sunny') 
@@ -147,15 +133,6 @@ Eg:
     humidity: 84,
     temperature: { high: 49, low: 38 }
   } */
-
-/*
-Goal: Return entire element with the highest humidity
-1. iterate through each element and target humidity 
-2. reduce method, acc will hold the highest humidity
-3. return function 
-Input: array of objects
-Output: object (element) of the one that has the highest humidity
-*/
 
 const getHighestHumidity = (weatherArray) => {
   const highestHumidity = weatherArray.reduce((acc, weatherObject) => {

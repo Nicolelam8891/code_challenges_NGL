@@ -37,10 +37,10 @@ var intersection = function(nums) {
   let sameNums = nums[0]
 
 //skip over first array
-for (const array of nums.slice(1)) {
+  for (const array of nums.slice(1)) {
   sameNums = sameNums.filter(num => array.includes(num))
-}
-return sameNums.sort((a, b) => a - b)
+  }
+  return sameNums.sort((a, b) => a - b)
 };
 
 console.log(intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]))

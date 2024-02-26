@@ -33,13 +33,12 @@ Falsey values such as 0 should be filtered out
 */
 
 var filter = function(arr, fn) {
-
-const filteredArray = []
+  const filteredArray = []
   for (var i = 0; i < arr.length; i++) {
     if (fn(arr[i], i)) {
       filteredArray.push(arr[i])
     }
   }
-return filteredArray
+  return filteredArray
 };
 

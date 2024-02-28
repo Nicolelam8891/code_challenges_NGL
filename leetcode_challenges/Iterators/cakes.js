@@ -103,6 +103,15 @@ console.log(getTotalCakesInStock(cakes))
 /* Example 4: Return an array of all unique toppings (no duplicates) needed to bake every cake in the dataset e.g.
   --> ['dutch process cocoa', 'toasted sugar', 'smoked sea salt', 'berries', ..etc] */
 
+  const getUniqueIngredients = (cakesArray) => {
+    let ingredientsForAllCakes = cakesArray.flatMap((cake) => {
+      return cake.toppings
+    })
+    const uniqueIngredients = [...new Set(ingredientsForAllCakes)]
+    return uniqueIngredients
+  }
+  console.log(getUniqueIngredients(cakes))
+  
 /* Example 5: I need to make a grocery list. Please give me an object where the keys are each topping, and the values are the amount of that topping I need to buy e.g.
      {
         'dutch process cocoa': 1,

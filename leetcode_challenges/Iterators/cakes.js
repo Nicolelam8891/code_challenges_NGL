@@ -81,7 +81,7 @@ const getCakeAndStock = (cakeArray) => {
      },
      ..etc
      ] */
-     
+
 //filter method's callback function is using an implicit return because it's a single expression and there are no curly braces surrounding the function body. 
      const getCakesInStock = (cakesArray) => {
       const cakesInStock = cakesArray.filter(cake => cake.inStock > 0) 
@@ -90,6 +90,15 @@ const getCakeAndStock = (cakeArray) => {
     console.log(getCakesInStock(cakes))
   
 /* Example 3: Return the total amount of cakes in stock e.g. 59 */
+
+const getTotalCakesInStock = (cakesArray) => {
+  const totalCakesInStock = cakesArray.reduce((acc, cake) => {
+  acc = acc + cake.inStock
+  return acc
+  }, 0)
+  return totalCakesInStock
+}
+console.log(getTotalCakesInStock(cakes))
 
 /* Example 4: Return an array of all unique toppings (no duplicates) needed to bake every cake in the dataset e.g.
   --> ['dutch process cocoa', 'toasted sugar', 'smoked sea salt', 'berries', ..etc] */

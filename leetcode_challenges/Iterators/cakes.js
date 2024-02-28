@@ -81,6 +81,13 @@ const getCakeAndStock = (cakeArray) => {
      },
      ..etc
      ] */
+     
+//filter method's callback function is using an implicit return because it's a single expression and there are no curly braces surrounding the function body. 
+     const getCakesInStock = (cakesArray) => {
+      const cakesInStock = cakesArray.filter(cake => cake.inStock > 0) 
+          return cakesInStock
+    }
+    console.log(getCakesInStock(cakes))
   
 /* Example 3: Return the total amount of cakes in stock e.g. 59 */
 

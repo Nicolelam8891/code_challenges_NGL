@@ -26,8 +26,8 @@ var isEmpty = function(obj) {
 //object.keys will return an array, and will contan the property names of the object 
 //if the length of the array is 0 -> the object is empty
 //can also use Object.Values and Object.Entries
-  var object = Object.keys(obj)
-  if (object.length === 0) {
+  var arr = Object.keys(obj={})//default array
+  if (arr.length === 0) {
       return true
   } else {
       return false

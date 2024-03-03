@@ -72,6 +72,25 @@ Return an object containing the names of which parks I need to visit and the one
        parksVisited: ["Rocky Mountain", "Acadia", "Zion"]
     }*/ 
 
+const getParksVisitedAndToVisit = (nationalParksArray) => {
+  const object = {
+    parksToVisit: [],
+    parksVisited: [],
+  }
+
+  const nationalParksToVisit = nationalParksArray
+    .filter(nationalPark => nationalPark.visited === false)
+    .map(nationalPark => nationalPark.name)
+    object.parksToVisit = nationalParksToVisit
+
+  const nationalParksVisited = nationalParksArray
+    .filter(nationalPark => nationalPark.visited === true)
+    .map(nationalPark => nationalPark.name)
+    object.parksVisited = nationalParksVisited
+
+    return object;
+}
+console.log(getParksVisitedAndToVisit(nationalParks))
 /* Example 2
 Return an array of objects where the key is the state and the value is its National Park
  eg: [ { Colorado: 'Rocky Mountain' },

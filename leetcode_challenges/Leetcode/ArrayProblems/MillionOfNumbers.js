@@ -57,3 +57,18 @@ const find_Matches = (nums1, nums2, nums3) => {
 
 console.log(find_Matches([1, 2, 4, 5, 8], [2, 3, 5, 7, 9], [1, 2, 5, 8, 9]))
 
+//for of loop method
+
+const findMatchesLoop = (nums1, nums2, nums3) => {
+  const commonElements = [];
+
+  for (const num of nums1) {
+    if (nums2.includes(num) && nums3.includes(num)) {
+      commonElements.push(num);
+    }
+  }
+  return commonElements
+}
+
+console.log(findMatchesLoop([1, 2, 4, 5, 8], [2, 3, 5, 7, 9], [1, 2, 5, 8, 9]))
+

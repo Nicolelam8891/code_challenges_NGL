@@ -12,7 +12,7 @@ Input: nums = [4,1,2,1,2]
 Output: 4
 Example 3:
 
-Input: nums = [1]
+Input: nums = [1]TG NJ CJXJ
 Output: 1
 */
 

@@ -131,4 +131,11 @@ Return an array of objects where the key is the state and the value is its Natio
        'bird watching',
        'canyoneering',
        'backpacking',
-       'rock climbing' ] */ 
+       'rock climbing' ] */
+       
+ const getActivities = (nationalParksArray) => {
+  const activities = nationalParksArray.flatMap(nationalPark => nationalPark.activities)
+  const uniqueActivities = [...new Set(activities)]
+  return uniqueActivities
+ }
+ console.log(getActivities(nationalParks))

@@ -69,12 +69,16 @@ const books = [
 }
 */
 
-//output: object 
-//key -> genres
-//value -> titles 
-//create an empty object
-/* 
-const object = {
-book.genres: book.titles
+const getBookGenresAndTitles = (booksArray) => {
+  const bookGenresAndTitles = booksArray.reduce((acc, book) => {
+    if(!acc[book.genre]) {
+      acc[book.genre] = []
+    }
+    acc[book.genre].push(book.title)
+    return acc
+  }, {})
+  return bookGenresAndTitles
 }
-*/
+console.log(getBookGenresAndTitles(books))
+
+/* Sort by ratings, high to low */

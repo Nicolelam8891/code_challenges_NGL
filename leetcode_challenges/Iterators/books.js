@@ -82,3 +82,11 @@ const getBookGenresAndTitles = (booksArray) => {
 console.log(getBookGenresAndTitles(books))
 
 /* Sort by ratings, high to low */
+
+const sortBooksByRating = (booksArray) => {
+  const booksByRating = booksArray.sort((a,b) => {
+    return b.rating - a.rating
+  })
+  return booksByRating
+}
+console.log(sortBooksByRating(books))

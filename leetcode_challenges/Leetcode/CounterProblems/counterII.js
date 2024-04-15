@@ -29,28 +29,31 @@ counter.reset(); // 0
 */ 
 
 var createCounter = function(init) {
-  let counter = init
+    let counter = init  
+        console.log('init', init)
 
-  let increment = function() {
-      counter++ 
-      return counter;
-  }
+        const increment = () => {
+            counter++
+            return counter
+        }
 
-   let decrement = function() {
-      counter--
-      return counter;
-  }
+        const decrement = () => {
+            counter--
+            return counter
+        }
 
-      let reset = function() {
-      counter = init
-      return counter;
-  }
+        const reset = () => {
+            counter = init
+            return counter
+        }
 
-  return {
-      increment, 
-      decrement, 
-      reset
-  }
+        return {
+            increment, 
+            decrement, 
+            reset
+        }
 };
 
+
 //have to return the object at the end for this to work
+

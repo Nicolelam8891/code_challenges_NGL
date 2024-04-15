@@ -56,4 +56,8 @@ var createCounter = function(init) {
 
 
 //have to return the object at the end for this to work
+//increment, decrement and reset are 3 different methods
+/* 
+Return Statement: The function returns an object: { increment, decrement, reset }. This object has three properties, each being a function. These functions are closures, meaning they retain access to the counter variable defined in the parent function (createCounter), even after the parent function has finished execution.
+*/
 

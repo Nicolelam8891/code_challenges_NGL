@@ -28,8 +28,6 @@ var createCounter = function(n) {
     }
   };
 
-var counter = createCounter(10);
-var counter = createCounter(-2);
+  //make sure to return both the function and the count for this to work
+  
 
-console.log(createCounter(10))
-console.log(createCounter(-2))

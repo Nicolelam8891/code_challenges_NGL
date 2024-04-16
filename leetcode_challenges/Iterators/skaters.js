@@ -17,13 +17,6 @@ let skateboarders = [
   { name: 'Ryan Sheckler', retired: true, tricksLanded: 5 },
 ];
 
-const getWorkingSkaters = (skateboardersArray) => {
-  const workingSkaters = skateboardersArray
-    .filter(skateboarder => skateboarder.retired === false)
-    .map(skateboarder => skateboarder.name )
-    return workingSkaters
-}
-console.log(getWorkingSkaters(skateboarders))
 
 /* Problem:
 Modify the getActiveSkateboarders function from Level One to also include active skateboarders who have landed fewer than 10 tricks. Append (needs practice) to their names.

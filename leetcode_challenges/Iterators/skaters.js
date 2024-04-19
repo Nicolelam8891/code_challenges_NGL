@@ -37,3 +37,12 @@ getActiveSkateboarders(skateboarders)
    'Elissa Steamer(needs practice)'
  ]
 */ 
+
+const getActiveSkateboardersAppend = (skatebordersArray) => {
+  const activeSkateboardersAppend = skatebordersArray.filter(skateboarder => skateboarder.retired === false)
+    console.log("activeSkateboardersAppend", activeSkateboardersAppend)
+  const skateboardersWithAppend = activeSkateboardersAppend.map(skateboarder => skateboarder.tricksLanded < 10 ? `${skateboarder.name}(needs practice)` : skateboarder.name)
+    console.log('skateboardersWithAppend', skateboardersWithAppend)
+    return skateboardersWithAppend
+}
+console.log(getActiveSkateboardersAppend(skateboarders))

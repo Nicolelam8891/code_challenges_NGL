@@ -45,3 +45,35 @@ const getActiveSkateboardersAppend = (skatebordersArray) => {
 }
 console.log(getActiveSkateboardersAppend(skateboarders))
 
+/* Level Three:
+
+ Problem:
+ Write a function called categorizeSkateboarders that takes an array of skateboarder objects as input and returns an object with two properties: active and retired. The active property should contain an array of active skateboarders (including those who need practice), and the retired property should contain an array of retired skateboarders.
+
+  returns 
+ {
+   active: [
+   'Tony Hawk',
+   'Rodney Mullen',
+   'Aori Nishimura',
+   'Elissa Steamer(needs practice)'
+ ],
+   retired: ['Leticia Bufoni', 'Nyjah Huston', 'Ryan Sheckler']
+ }
+ */
+
+ const categorizeSkateboarders = (skatebordersArray) => {
+  return skatebordersArray.reduce((acc, skateboarder) => {
+    if (skateboarder.retired === true) {
+      acc.retired.push(skateboarder.name)
+    } else {
+      if (skateboarder.tricksLanded < 10) {
+        acc.active.push(`${skateboarder.name} (needs practice)`)
+       } else {
+          acc.active.push(skateboarder.name)
+      }
+    }
+    return acc;
+  }, {active: [], retired: []})
+}
+ console.log(categorizeSkateboarders(skateboarders))

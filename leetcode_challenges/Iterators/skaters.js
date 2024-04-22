@@ -11,7 +11,7 @@ let skateboarders = [
   { name: 'Tony Hawk', retired: false, tricksLanded: 15 },
   { name: 'Leticia Bufoni', retired: true, tricksLanded: 8 },
   { name: 'Rodney Mullen', retired: false, tricksLanded: 20 },
-  { name: 'Aori Nishimura', retired: false, tricksLanded: 12 },
+  { name: 'Aori Nishimura', retired: false, tricksLanded: 12 },  
   { name: 'Nyjah Huston', retired: true, tricksLanded: 10 },
   { name: 'Elissa Steamer', retired: false, tricksLanded: 6 },
   { name: 'Ryan Sheckler', retired: true, tricksLanded: 5 },
@@ -40,9 +40,8 @@ getActiveSkateboarders(skateboarders)
 
 const getActiveSkateboardersAppend = (skatebordersArray) => {
   const activeSkateboardersAppend = skatebordersArray.filter(skateboarder => skateboarder.retired === false)
-    console.log("activeSkateboardersAppend", activeSkateboardersAppend)
   const skateboardersWithAppend = activeSkateboardersAppend.map(skateboarder => skateboarder.tricksLanded < 10 ? `${skateboarder.name}(needs practice)` : skateboarder.name)
-    console.log('skateboardersWithAppend', skateboardersWithAppend)
     return skateboardersWithAppend
 }
 console.log(getActiveSkateboardersAppend(skateboarders))
+

@@ -14,7 +14,6 @@ const getDuplicateStrings = (sentenceArray) => {
   //add the sentence, with a space, and then the sentence again and repeat for the other sentences too
   return duplicateStrings
 }
-
 console.log(getDuplicateStrings(sentences))
 
 const strings = [

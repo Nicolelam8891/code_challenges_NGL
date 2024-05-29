@@ -60,6 +60,21 @@ const books = [
 
 const numbersToDouble = [2, 4, 6, 8, 10];
 // Prompt: Write a function that takes an array of numbers and multiplies each number by 2, updating the original array.
+/* 
+input: array of integers
+output: want an array of integers multipled by 2
+steps:
+1. map method because we want to transform the array 
+2. return
+*/
+
+const getNumbersDoubled = (numbersToDoubleArray) => {
+  const numbersDoubled = numbersToDouble.map(number => number * 2)
+    return numbersDoubled
+}
+console.log(getNumbersDoubled(numbersToDouble))
+
+/*=========*/ 
 
 // Level 2: Intermediate
 

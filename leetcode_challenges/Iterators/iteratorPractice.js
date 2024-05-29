@@ -16,6 +16,8 @@ const getDuplicateStrings = (sentenceArray) => {
 }
 console.log(getDuplicateStrings(sentences))
 
+/*=========*/ 
+
 const strings = [
   "Apple",
   "Banana",
@@ -26,6 +28,24 @@ const strings = [
 ];
 
 // Prompt: Write a function that takes an array of strings and returns a new array containing only the strings with a length greater than 5.
+/*
+input: array of strings
+output: array of strings of length > 5
+steps: 
+1. iterate through array, want to filter through each string
+2. filter method
+3. conditional 
+  a. if the lenght of character is > 5, the string will be in the new array
+4. return function
+*/
+
+const getStringGreaterThan5 = (stringsArray) => {
+  const stringsGreaterThan5 = strings.filter(string => string.length > 5)
+    return stringsGreaterThan5
+}
+console.log(getStringGreaterThan5(strings))
+
+/*=========*/ 
 
 const numbers = [5, 10, 15, 20, 25];
 // Prompt: Write a function that takes an array of numbers and returns the sum of all the numbers in the array.

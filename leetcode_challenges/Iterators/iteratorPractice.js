@@ -77,14 +77,30 @@ console.log(getNumbersDoubled(numbersToDouble))
 /*=========*/ 
 
 // Level 2: Intermediate
-
-
 const sentencesToReverse = [
   "Hello, world!",
   "This is a sample sentence.",
   "Array methods are fun to learn."
 ];
 // Prompt: Write a function that takes an array of sentences and returns a new array with each sentence reversed.
+/* 
+input: array of sentences 
+output: array of sentences reversed
+Steps: target and manipuate each sentence, need to iterate over each element
+1. map 
+  a. split method to split each sentence into an array of words 
+2. reverse method
+  a. join will join the reversed array of words back into a sentence
+3. return
+*/
+
+const getReversedSentences = (sentencesToReverseArray) => {
+  const reversedSentences = sentencesToReverseArray.map(sentence => sentence.split(' ').reverse().join(' '))
+    return reversedSentences
+}
+console.log(getReversedSentences(sentencesToReverse))
+/*=========*/ 
+
 
 const stringsToFilter = [
   "JavaScript is awesome!",
